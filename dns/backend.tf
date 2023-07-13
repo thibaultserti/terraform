@@ -1,6 +1,10 @@
 terraform {
-  backend "gcs" {
-    bucket = "ayanides-cloud-tfstates"
-    prefix = "dns"
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "thibaultserti"
+
+    workspaces {
+      name = "dns"
+    }
   }
 }
