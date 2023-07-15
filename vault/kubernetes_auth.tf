@@ -15,5 +15,5 @@ resource "vault_kubernetes_auth_backend_role" "roles" {
   bound_service_account_namespaces = [each.value.namespace]
   token_ttl                        = 3600
   token_policies                   = [each.key]
-  audience                         = "vault"
+  audience                         = null
 }
