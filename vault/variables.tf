@@ -4,6 +4,12 @@ variable "kubernetes_host" {
   default     = "https://localhost:6443"
 }
 
+variable "kvv2_path" {
+  type        = string
+  default     = "internal"
+  description = "KVv2 secret engine path"
+}
+
 variable "apps" {
   type = map(
     object({

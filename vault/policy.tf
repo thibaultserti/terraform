@@ -6,7 +6,7 @@ resource "vault_policy" "policies" {
 
   policy = <<EOT
 %{for path in each.value.secrets}
-path "secret/${path}" {
+path "${var.kvv2_path}/data/${path}" {
   capabilities = ["read"]
 }
 %{endfor}

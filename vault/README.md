@@ -32,6 +32,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_apps"></a> [apps](#input\_apps) | Apps to create kubernetes bindings to secrets | <pre>map(<br>    object({<br>      secrets   = list(string)<br>      namespace = string<br>      }<br>  ))</pre> | `{}` | no |
 | <a name="input_kubernetes_host"></a> [kubernetes\_host](#input\_kubernetes\_host) | Kubernetes control plane endpoint | `string` | `"https://localhost:6443"` | no |
+| <a name="input_kvv2_path"></a> [kvv2\_path](#input\_kvv2\_path) | KVv2 secret engine path | `string` | `"internal"` | no |
 
 ## Outputs
 
