@@ -12,10 +12,6 @@ $ export VAULT_TOKEN=
 ```bash
 $ vault policy write terraform - <<EOF
 path "*" {
-  capabilities = ["list", "read"]
-}
-
-path "secrets/*" {
   capabilities = ["create", "read", "update", "delete", "list"]
 }
 
