@@ -1,7 +1,7 @@
 # providers
 
-domain_name        = "ayanides.cloud"
-tailscale_domain   = "taildcc0a.ts.net"
+domain_name      = "ayanides.cloud"
+tailscale_domain = "taildcc0a.ts.net"
 
 # records
 

@@ -1,3 +1,4 @@
+<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
 | Name | Version |
@@ -10,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.8.0 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.10.0 |
 | <a name="provider_pihole"></a> [pihole](#provider\_pihole) | 0.0.12 |
 
 ## Modules
@@ -21,8 +22,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [cloudflare_record.example](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
-| [pihole_cname_record.record](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/cname_record) | resource |
+| [cloudflare_record.cloudflare_records_internal](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
+| [cloudflare_record.wildcard_record](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
+| [pihole_cname_record.pihole_records_internal](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/cname_record) | resource |
 | [pihole_dns_record.host_records](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/dns_record) | resource |
 
 ## Inputs
@@ -42,3 +44,4 @@ No modules.
 ## Outputs
 
 No outputs.
+<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

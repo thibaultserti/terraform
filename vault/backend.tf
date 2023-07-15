@@ -4,7 +4,7 @@ terraform {
     organization = "thibaultserti"
 
     workspaces {
-      name = "dns"
+      name = "vault"
     }
   }
 }

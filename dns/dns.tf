@@ -28,10 +28,10 @@ resource "cloudflare_record" "cloudflare_records_internal" {
 
 # wildcard is not supported by pihole API, so we manage it separately
 resource "cloudflare_record" "wildcard_record" {
-  zone_id  = var.cloudflare_zone_id
-  name     = "*"
-  value    = format("%s.%s", var.lb_host, var.tailscale_domain)
-  type     = "CNAME"
-  ttl      = 3600
-  proxied  = false
+  zone_id = var.cloudflare_zone_id
+  name    = "*"
+  value   = format("%s.%s", var.lb_host, var.tailscale_domain)
+  type    = "CNAME"
+  ttl     = 3600
+  proxied = false
 }
