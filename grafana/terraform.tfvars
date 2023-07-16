@@ -7,7 +7,7 @@ datasources = {
       url  = "http://prometheus-stack-kube-prom-prometheus:9090"
       json_data_encoded = {
         prometheusType    = "Prometheus"
-        prometheusVersion = "> 2.40.x"
+        prometheusVersion = "2.45.0"
       }
     }
   ]
