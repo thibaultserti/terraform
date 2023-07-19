@@ -11,7 +11,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.10.0 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | ~> 4.0 |
 | <a name="provider_pihole"></a> [pihole](#provider\_pihole) | 0.0.12 |
 
 ## Modules
