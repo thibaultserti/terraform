@@ -4,5 +4,9 @@ apps = {
   "grafana" = {
     secrets   = ["grafana"]
     namespace = "monitoring"
+  },
+  "argocd-notifications-controller" = {
+    secrets   = ["argocd/notifications"]
+    namespace = "argocd"
   }
 }
