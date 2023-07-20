@@ -9,4 +9,8 @@ apps = {
     secrets   = ["argocd/notifications"]
     namespace = "argocd"
   }
+  "prometheus-stack-kube-prom-alertmanager" = {
+    secrets   = ["alertmanager"]
+    namespace = "monitoring"
+  }
 }
