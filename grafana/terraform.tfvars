@@ -12,3 +12,5 @@ datasources = {
     }
   ]
 }
+
+folders = []

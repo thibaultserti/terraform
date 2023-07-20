@@ -33,3 +33,9 @@ variable "datasources" {
     datasources = []
   }
 }
+
+variable "folders" {
+  type        = list(string)
+  description = "List of folders to create"
+  default     = []
+}
