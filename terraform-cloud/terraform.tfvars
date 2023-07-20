@@ -18,5 +18,3 @@ workspaces = [
 ]
 
 github_app_installation_id = "ghain-zKW6XEDxFXDwiUEy"
-
-ssh_key_id = "sshkey-tBVuzc29qCKHG5Hj"
