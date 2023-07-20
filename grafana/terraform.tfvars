@@ -13,4 +13,9 @@ datasources = {
   ]
 }
 
-folders = []
+folders = ["Network"]
+dashboards = [{
+  name   = "blackbox-exporter"
+  folder = "Network"
+  }
+]

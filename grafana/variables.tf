@@ -39,3 +39,15 @@ variable "folders" {
   description = "List of folders to create"
   default     = []
 }
+
+variable "dashboards" {
+  type = list(
+    object({
+      name   = string,
+      folder = string,
+    })
+  )
+
+  description = "Grafana dashboards"
+  default     = []
+}
