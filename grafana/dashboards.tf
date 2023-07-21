@@ -3,6 +3,6 @@ resource "grafana_dashboard" "dashboards" {
 
   org_id      = var.org_id
   config_json = file(format("files/%s.json", each.value.name))
-  folder      = grafana_folder.folders[each.value.folder].uid
+  folder      = each.value.folder != null ? grafana_folder.folders[each.value.folder].uid : null
   overwrite   = true
 }

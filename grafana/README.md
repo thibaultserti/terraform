@@ -33,7 +33,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_dashboards"></a> [dashboards](#input\_dashboards) | Grafana dashboards | <pre>list(<br>    object({<br>      name   = string,<br>      folder = string,<br>    })<br>  )</pre> | `[]` | no |
+| <a name="input_dashboards"></a> [dashboards](#input\_dashboards) | Grafana dashboards | <pre>list(<br>    object({<br>      name   = string,<br>      folder = optional(string),<br>    })<br>  )</pre> | `[]` | no |
 | <a name="input_datasources"></a> [datasources](#input\_datasources) | Grafana datasources | <pre>object({<br>    is_default = string<br>    datasources = list(<br>      object({<br>        type              = string,<br>        name              = string,<br>        url               = string,<br>        json_data_encoded = optional(map(string))<br>      })<br>    )<br>  })</pre> | <pre>{<br>  "datasources": [],<br>  "is_default": null<br>}</pre> | no |
 | <a name="input_folders"></a> [folders](#input\_folders) | List of folders to create | `list(string)` | `[]` | no |
 | <a name="input_grafana_address"></a> [grafana\_address](#input\_grafana\_address) | Grafana URL | `string` | `"https://grafana.ayanides.cloud"` | no |

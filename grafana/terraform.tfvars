@@ -22,9 +22,51 @@ datasources = {
   ]
 }
 
-folders = ["Network"]
-dashboards = [{
-  name   = "blackbox-exporter"
-  folder = "Network"
-  }
+folders = ["Network", "GitOps", "Cilium", "Security"]
+dashboards = [
+  {
+    name   = "blackbox-exporter"
+    folder = "Network"
+  },
+  {
+    name   = "argocd"
+    folder = "GitOps"
+  },
+  {
+    name   = "pihole"
+    folder = "Network"
+  },
+  {
+    name   = "traefik"
+    folder = "Network"
+  },
+  {
+    name   = "nginx"
+    folder = "Network"
+  },
+  {
+    name = "node-exporter-full"
+  },
+  {
+    name = "prometheus"
+  },
+  {
+    name = "alertmanager"
+  },
+  {
+    name   = "cilium-agent"
+    folder = "Cilium"
+  },
+  {
+    name   = "cilium-hubble"
+    folder = "Cilium"
+  },
+  {
+    name   = "cilium-operator"
+    folder = "Cilium"
+  },
+  {
+    name   = "vault"
+    folder = "Security"
+  },
 ]

@@ -44,7 +44,7 @@ variable "dashboards" {
   type = list(
     object({
       name   = string,
-      folder = string,
+      folder = optional(string),
     })
   )
 
