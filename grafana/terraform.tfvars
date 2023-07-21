@@ -9,6 +9,15 @@ datasources = {
         prometheusType    = "Prometheus"
         prometheusVersion = "2.40.1"
       }
+    },
+    {
+      type = "alertmanager"
+      name = "alertmanager"
+      url  = "http://alertmanager-operated:9093"
+      json_data_encoded = {
+        implementation             = "prometheus"
+        handleGrafanaManagedAlerts = true
+      }
     }
   ]
 }
