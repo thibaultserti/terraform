@@ -17,4 +17,8 @@ apps = {
     secrets   = ["pihole-exporter"]
     namespace = "monitoring"
   }
+  "robusta-runner-service-account" = {
+    secrets   = ["robusta"]
+    namespace = "monitoring"
+  }
 }
