@@ -21,4 +21,8 @@ apps = {
     secrets   = ["robusta"]
     namespace = "monitoring"
   }
+  "minio" = {
+    secrets   = ["minio"]
+    namespace = "minio"
+  }
 }

@@ -22,7 +22,7 @@ datasources = {
   ]
 }
 
-folders = ["Network", "GitOps", "Cilium", "Security"]
+folders = ["Network", "GitOps", "Cilium", "Storage"]
 dashboards = [
   {
     name   = "blackbox-exporter"
@@ -67,6 +67,11 @@ dashboards = [
   },
   {
     name   = "vault"
-    folder = "Security"
+    folder = "Storage"
   },
+  {
+    name   = "minio"
+    folder = "Storage"
+  },
+
 ]
