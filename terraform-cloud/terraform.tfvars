@@ -14,6 +14,10 @@ workspaces = [
   {
     name        = "tailscale"
     description = "Tailscale management"
+  },
+  {
+    name        = "minio"
+    description = "Minio management"
   }
 ]
 
