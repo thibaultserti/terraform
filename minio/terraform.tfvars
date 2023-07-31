@@ -1,5 +1,8 @@
 buckets = [
   {
-    "name" = "loki-storage"
+    "name" = "loki-chunks"
+  },
+  {
+    "name" = "loki-ruler"
   }
 ]

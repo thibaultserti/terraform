@@ -11,5 +11,5 @@ resource "grafana_data_source" "datasources" {
   url = each.value.url
 
   json_data_encoded = jsonencode(each.value.json_data_encoded)
-
+  http_headers      = each.value.http_headers
 }

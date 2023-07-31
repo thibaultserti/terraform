@@ -18,6 +18,14 @@ datasources = {
         implementation             = "prometheus"
         handleGrafanaManagedAlerts = true
       }
+    },
+    {
+      type = "loki"
+      name = "loki"
+      url  = "http://loki:3100"
+      http_headers = {
+        X-Scope-OrgID = "1"
+      }
     }
   ]
 }

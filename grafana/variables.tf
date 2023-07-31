@@ -24,6 +24,7 @@ variable "datasources" {
         name              = string,
         url               = string,
         json_data_encoded = optional(map(string))
+        http_headers      = optional(map(string))
       })
     )
   })
