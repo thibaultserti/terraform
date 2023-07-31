@@ -7,7 +7,7 @@ resource "tfe_workspace" "workspaces" {
   agent_pool_id     = each.value.execution_mode == "agent" ? tfe_agent_pool.agent_pool.id : null
   execution_mode    = each.value.execution_mode
   working_directory = each.value.working_directory != null ? each.value.working_directory : each.value.name
-  trigger_patterns  = each.value.working_directory != null ? [format("%s/**", each.value.working_directory)] : [format("%s/**", each.value.name)]
+  trigger_patterns  = each.value.working_directory != null ? [format("%s/**/*", each.value.working_directory)] : [format("%s/**/*", each.value.name)]
   auto_apply        = each.value.auto_apply
   ssh_key_id        = var.ssh_key_id
   vcs_repo {
