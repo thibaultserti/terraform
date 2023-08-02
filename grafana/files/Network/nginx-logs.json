@@ -269,6 +269,26 @@
       "type": "stat"
     },
     {
+      "collapsed": false,
+      "datasource": "$datasource",
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 3
+      },
+      "id": 28,
+      "panels": [],
+      "targets": [
+        {
+          "datasource": "$datasource",
+          "refId": "A"
+        }
+      ],
+      "title": "Sources & Behaviours",
+      "type": "row"
+    },
+    {
       "circleMaxSize": "30",
       "circleMinSize": "2",
       "colors": [
@@ -280,19 +300,19 @@
       "decimals": 0,
       "esMetric": "Count",
       "gridPos": {
-        "h": 9,
+        "h": 24,
         "w": 24,
         "x": 0,
-        "y": 3
+        "y": 4
       },
       "hideEmpty": false,
       "hideZero": false,
       "id": 30,
-      "initialZoom": "1",
+      "initialZoom": "3",
       "locationData": "countries",
-      "mapCenter": "(0°, 0°)",
-      "mapCenterLatitude": 0,
-      "mapCenterLongitude": 0,
+      "mapCenter": "Europe",
+      "mapCenterLatitude": 46,
+      "mapCenterLongitude": 14,
       "maxDataPoints": 1,
       "mouseWheelZoom": false,
       "pluginVersion": "7.3.7",
@@ -315,30 +335,11 @@
         }
       ],
       "thresholds": "5,10",
+      "title": "Map",
       "type": "grafana-worldmap-panel",
       "unitPlural": "",
       "unitSingle": "",
       "valueName": "total"
-    },
-    {
-      "collapsed": false,
-      "datasource": "$datasource",
-      "gridPos": {
-        "h": 1,
-        "w": 24,
-        "x": 0,
-        "y": 12
-      },
-      "id": 28,
-      "panels": [],
-      "targets": [
-        {
-          "datasource": "$datasource",
-          "refId": "A"
-        }
-      ],
-      "title": "Sources & Behaviours",
-      "type": "row"
     },
     {
       "datasource": "$datasource",
@@ -403,7 +404,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 13
+        "y": 28
       },
       "id": 3,
       "interval": "30m",
@@ -525,7 +526,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 13
+        "y": 28
       },
       "id": 42,
       "interval": "30m",
@@ -605,7 +606,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -646,7 +648,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 21
+        "y": 36
       },
       "id": 43,
       "interval": "5m",
@@ -726,7 +728,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green"
+                "color": "green",
+                "value": null
               },
               {
                 "color": "red",
@@ -767,7 +770,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 21
+        "y": 36
       },
       "id": 12,
       "interval": "5m",
@@ -831,7 +834,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 29
+        "y": 44
       },
       "id": 24,
       "panels": [],
@@ -857,7 +860,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "light-blue"
+                "color": "light-blue",
+                "value": null
               }
             ]
           },
@@ -869,7 +873,7 @@
         "h": 12,
         "w": 15,
         "x": 0,
-        "y": 30
+        "y": 45
       },
       "id": 5,
       "interval": "30s",
@@ -914,7 +918,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple"
+                "color": "purple",
+                "value": null
               }
             ]
           },
@@ -926,7 +931,7 @@
         "h": 4,
         "w": 9,
         "x": 15,
-        "y": 30
+        "y": 45
       },
       "id": 4,
       "interval": "30s",
@@ -959,7 +964,10 @@
       "type": "stat"
     },
     {
-      "datasource": "$datasource",
+      "datasource": {
+        "type": "loki",
+        "uid": "$datasource"
+      },
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -973,7 +981,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple"
+                "color": "purple",
+                "value": null
               },
               {
                 "color": "red",
@@ -989,7 +998,7 @@
         "h": 4,
         "w": 5,
         "x": 15,
-        "y": 34
+        "y": 49
       },
       "id": 19,
       "links": [],
@@ -1013,8 +1022,10 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": " sum(rate({filename=\"$filename\", node_name=\"$node_name\"} | json | status >= 500 |__error__=\"\"[$__interval])) / (sum(rate({filename=\"$filename\", node_name=\"$node_name\"} | json | __error__=\"\"[$__interval])) / 100)",
+          "editorMode": "code",
+          "expr": "sum(rate({filename=\"$filename\", node_name=\"$node_name\"} | json | status >= 500 |__error__=\"\"[$__interval])) / (sum(rate({filename=\"$filename\", node_name=\"$node_name\"} | json | __error__=\"\"[$__interval])) / 100)",
           "legendFormat": "",
+          "queryType": "instant",
           "refId": "A"
         }
       ],
@@ -1036,7 +1047,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple"
+                "color": "purple",
+                "value": null
               }
             ]
           },
@@ -1048,7 +1060,7 @@
         "h": 4,
         "w": 4,
         "x": 20,
-        "y": 34
+        "y": 49
       },
       "id": 18,
       "interval": "10m",
@@ -1094,7 +1106,8 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "purple"
+                "color": "purple",
+                "value": null
               }
             ]
           },
@@ -1106,7 +1119,7 @@
         "h": 4,
         "w": 9,
         "x": 15,
-        "y": 38
+        "y": 53
       },
       "id": 8,
       "interval": "10m",
@@ -1164,7 +1177,7 @@
         "h": 14,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 57
       },
       "id": 11,
       "options": {
@@ -1195,7 +1208,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 56
+        "y": 71
       },
       "id": 26,
       "panels": [],
@@ -1230,7 +1243,7 @@
         "h": 9,
         "w": 7,
         "x": 0,
-        "y": 57
+        "y": 72
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1335,7 +1348,7 @@
         "h": 9,
         "w": 9,
         "x": 7,
-        "y": 57
+        "y": 72
       },
       "hiddenSeries": false,
       "id": 2,
@@ -1438,7 +1451,7 @@
         "h": 9,
         "w": 8,
         "x": 16,
-        "y": 57
+        "y": 72
       },
       "hiddenSeries": false,
       "id": 9,
@@ -1642,6 +1655,6 @@
   "timezone": "",
   "title": "Analytics - NGINX / LOKI v2+ Data Source / Promtail v2+ Tool",
   "uid": "ed0f3c13-fc79-411f-b532-d9b183a5ab6e",
-  "version": 6,
+  "version": 10,
   "weekStart": ""
 }
