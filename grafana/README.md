@@ -26,14 +26,16 @@ No modules.
 | Name | Type |
 |------|------|
 | [grafana_dashboard.dashboards](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/dashboard) | resource |
-| [grafana_data_source.datasources](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
+| [grafana_data_source.alertmanager](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
+| [grafana_data_source.loki](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
+| [grafana_data_source.prometheus](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
+| [grafana_data_source.tempo](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_folder.folders](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/folder) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_datasources"></a> [datasources](#input\_datasources) | Grafana datasources | <pre>object({<br>    is_default = string<br>    datasources = list(<br>      object({<br>        type              = string,<br>        name              = string,<br>        url               = string,<br>        json_data_encoded = optional(map(string))<br>        http_headers      = optional(map(string))<br>      })<br>    )<br>  })</pre> | <pre>{<br>  "datasources": [],<br>  "is_default": null<br>}</pre> | no |
 | <a name="input_grafana_address"></a> [grafana\_address](#input\_grafana\_address) | Grafana URL | `string` | `"https://grafana.ayanides.cloud"` | no |
 | <a name="input_grafana_auth"></a> [grafana\_auth](#input\_grafana\_auth) | Grafana API token with the user:password format | `string` | n/a | yes |
 | <a name="input_org_id"></a> [org\_id](#input\_org\_id) | Grafana organization id | `string` | `"1"` | no |

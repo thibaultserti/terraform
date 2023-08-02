@@ -14,23 +14,3 @@ variable "org_id" {
   description = "Grafana organization id"
   default     = "1"
 }
-
-variable "datasources" {
-  type = object({
-    is_default = string
-    datasources = list(
-      object({
-        type              = string,
-        name              = string,
-        url               = string,
-        json_data_encoded = optional(map(string))
-        http_headers      = optional(map(string))
-      })
-    )
-  })
-  description = "Grafana datasources"
-  default = {
-    is_default  = null
-    datasources = []
-  }
-}
