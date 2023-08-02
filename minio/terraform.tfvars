@@ -4,5 +4,8 @@ buckets = [
   },
   {
     "name" = "loki-ruler"
+  },
+  {
+    "name" = "tempo"
   }
 ]
