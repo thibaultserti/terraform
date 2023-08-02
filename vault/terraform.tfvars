@@ -29,4 +29,8 @@ apps = {
     secrets   = ["loki"]
     namespace = "monitoring"
   }
+  "tempo" = {
+    secrets   = ["tempo"]
+    namespace = "monitoring"
+  }
 }
