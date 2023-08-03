@@ -48,8 +48,14 @@ resource "grafana_data_source" "loki" {
     derivedFields = [
       {
         name          = "traceID"
-        matcherRegex  = "(?:traceID|trace_id)=(\\w+)"
-        url           = "https://grafana.ayanides.cloud/$${__value.raw}"
+        matcherRegex  = "[\"|'|\\s]*trace_?[i|I][d|D][\"|'|\\s]*[:|=][\"|'|\\s]*(\\w+)"
+        url           = "$${__value.raw}"
+        datasourceUid = "tempo"
+      },
+      {
+        name          = "spanID"
+        matcherRegex  = "[\"|'|\\s]*span_?[i|I][d|D][\"|'|\\s]*[:|=][\"|'|\\s]*(\\w+)"
+        url           = "$${__value.raw}"
         datasourceUid = "tempo"
       }
     ]
