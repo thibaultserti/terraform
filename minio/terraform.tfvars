@@ -1,11 +1,14 @@
 buckets = [
   {
-    "name" = "loki-chunks"
+    "name"  = "loki-chunks"
+    "quota" = 20000000000
+
   },
   {
     "name" = "loki-ruler"
   },
   {
-    "name" = "tempo"
+    "name"  = "tempo"
+    "quota" = 20000000000
   }
 ]
