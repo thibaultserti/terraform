@@ -17,9 +17,10 @@ variable "minio_password" {
 
 variable "buckets" {
   type = list(object({
-    name  = string
-    acl   = optional(string, "private")
-    quota = optional(number, 1000000000)
+    name       = string
+    acl        = optional(string, "private")
+    quota      = optional(number, 1000000000)
+    expiration = string
   }))
 
 }
