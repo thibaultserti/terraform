@@ -1,36 +1,40 @@
 kubernetes_host = "https://10.96.0.1:443"
 
 apps = {
-  "grafana" = {
+  grafana = {
     secrets   = ["grafana"]
     namespace = "monitoring"
   }
-  "argocd-notifications-controller" = {
+  argocd-notifications-controller = {
     secrets   = ["argocd/notifications"]
     namespace = "argocd"
   }
-  "prometheus-stack-kube-prom-alertmanager" = {
+  prometheus-stack-kube-prom-alertmanager = {
     secrets   = ["alertmanager"]
     namespace = "monitoring"
   }
-  "pihole-exporter" = {
+  pihole-exporter = {
     secrets   = ["pihole-exporter"]
     namespace = "monitoring"
   }
-  "robusta-runner-service-account" = {
+  robusta-runner-service-account = {
     secrets   = ["robusta"]
     namespace = "monitoring"
   }
-  "minio" = {
+  minio = {
     secrets   = ["minio"]
     namespace = "minio"
   }
-  "loki" = {
+  loki = {
     secrets   = ["loki"]
     namespace = "monitoring"
   }
-  "tempo" = {
+  tempo = {
     secrets   = ["tempo"]
     namespace = "monitoring"
+  }
+  vault-snapshot = {
+    secrets   = ["vault-snapshot"]
+    namespace = "vault"
   }
 }

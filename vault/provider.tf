@@ -11,3 +11,8 @@ provider "vault" {
     }
   }
 }
+
+provider "google" {
+  project = "infra-390806"
+  region  = "europe-west1"
+}
