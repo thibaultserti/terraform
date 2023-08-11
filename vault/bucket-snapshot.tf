@@ -15,7 +15,7 @@ resource "google_storage_bucket" "vault_infra_snapshot" {
 
 resource "google_storage_bucket_iam_binding" "vault_infra_snapshot_binding" {
   bucket = google_storage_bucket.vault_infra_snapshot.name
-  role   = "roles/storage.admin"
+  role   = "roles/storage.objectAdmin"
   members = [
     google_service_account.service_account.member
   ]

@@ -33,8 +33,8 @@ apps = {
     secrets   = ["tempo"]
     namespace = "monitoring"
   }
-  vault-snapshot = {
-    secrets   = ["vault-snapshot"]
-    namespace = "vault"
+  longhorn-service-account = {
+    secrets   = ["longhorn"]
+    namespace = "longhorn-system"
   }
 }
