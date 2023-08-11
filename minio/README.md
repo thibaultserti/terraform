@@ -1,3 +1,28 @@
+
+# Setup
+Create terraform user/password
+Setup access keys manually :
+```json
+{
+ "Version": "2012-10-17",
+ "Statement": [
+  {
+   "Effect": "Allow",
+   "Action": [
+    "s3:*"
+   ],
+   "Resource": [
+    "arn:aws:s3:::loki-chunks/*",
+    "arn:aws:s3:::loki-ruler",
+    "arn:aws:s3:::loki-ruler/*",
+    "arn:aws:s3:::loki-chunks"
+   ]
+  }
+ ]
+}
+```
+
+
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 
