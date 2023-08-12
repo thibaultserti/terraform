@@ -37,4 +37,8 @@ apps = {
     secrets   = ["longhorn"]
     namespace = "longhorn-system"
   }
+  mimir = {
+    secrets   = ["mimir"]
+    namespace = "monitoring"
+  }
 }

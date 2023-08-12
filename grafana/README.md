@@ -9,13 +9,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.5.0 |
-| <a name="requirement_grafana"></a> [grafana](#requirement\_grafana) | ~> 2.1.0 |
+| <a name="requirement_grafana"></a> [grafana](#requirement\_grafana) | ~> 2.2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_grafana"></a> [grafana](#provider\_grafana) | ~> 2.1.0 |
+| <a name="provider_grafana"></a> [grafana](#provider\_grafana) | ~> 2.2.0 |
 
 ## Modules
 
@@ -28,6 +28,7 @@ No modules.
 | [grafana_dashboard.dashboards](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/dashboard) | resource |
 | [grafana_data_source.alertmanager](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.loki](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
+| [grafana_data_source.mimir](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.prometheus](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.tempo](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_folder.folders](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/folder) | resource |

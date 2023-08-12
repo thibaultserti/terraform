@@ -17,5 +17,15 @@ buckets = [
     name       = "mimir"
     quota      = 20000000000
     expiration = "90d"
+  },
+  {
+    name       = "mimir-ruler"
+    quota      = 20000000000
+    expiration = "90d"
+  },
+  {
+    name       = "mimir-alert"
+    quota      = 20000000000
+    expiration = "90d"
   }
 ]

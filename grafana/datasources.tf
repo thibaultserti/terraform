@@ -14,6 +14,29 @@ resource "grafana_data_source" "prometheus" {
     prometheusType    = "Prometheus"
     prometheusVersion = "2.40.1"
   })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
+}
+
+
+resource "grafana_data_source" "mimir" {
+
+  org_id = var.org_id
+
+  type = "prometheus"
+  name = "mimir"
+  uid  = "mimir"
+
+  url = "http://mimir-gateway:8080/prometheus"
+
+  json_data_encoded = jsonencode({
+    prometheusType    = "Mimir"
+    prometheusVersion = "2.9.1"
+  })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
 }
 
 
@@ -31,6 +54,9 @@ resource "grafana_data_source" "alertmanager" {
     implementation             = "prometheus"
     handleGrafanaManagedAlerts = true
   })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
 }
 
 resource "grafana_data_source" "loki" {
