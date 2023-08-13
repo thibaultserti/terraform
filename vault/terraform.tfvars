@@ -41,4 +41,8 @@ apps = {
     secrets   = ["mimir"]
     namespace = "monitoring"
   }
+  thanos-query = {
+    secrets   = ["thanos"]
+    namespace = "monitoring"
+  }
 }

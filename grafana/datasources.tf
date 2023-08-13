@@ -20,6 +20,25 @@ resource "grafana_data_source" "prometheus" {
 }
 
 
+resource "grafana_data_source" "thanos" {
+
+  org_id = var.org_id
+
+  type = "prometheus"
+  name = "thanos"
+  uid  = "thanos"
+
+  url = "http://thanos-query-frontend:9090"
+  json_data_encoded = jsonencode({
+    prometheusType    = "Thanos"
+    prometheusVersion = "0.31.1"
+  })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
+}
+
+
 resource "grafana_data_source" "mimir" {
 
   org_id = var.org_id

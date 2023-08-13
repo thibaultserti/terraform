@@ -5,10 +5,6 @@ buckets = [
     expiration = "90d"
   },
   {
-    name       = "loki-ruler"
-    expiration = "30d"
-  },
-  {
     name       = "tempo"
     quota      = 20000000000
     expiration = "90d"
@@ -19,12 +15,7 @@ buckets = [
     expiration = "90d"
   },
   {
-    name       = "mimir-ruler"
-    quota      = 20000000000
-    expiration = "90d"
-  },
-  {
-    name       = "mimir-alert"
+    name       = "thanos"
     quota      = 20000000000
     expiration = "90d"
   }
