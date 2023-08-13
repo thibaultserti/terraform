@@ -32,6 +32,7 @@ resource "grafana_data_source" "thanos" {
   json_data_encoded = jsonencode({
     prometheusType    = "Thanos"
     prometheusVersion = "0.31.1"
+    httpMethod        = "POST"
   })
   http_headers = {
     X-Scope-OrgID = "1"
@@ -160,6 +161,24 @@ resource "grafana_data_source" "tempo" {
       type = "Tag"
       tag  = "http.path"
     }
+  })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
+}
+
+resource "grafana_data_source" "phlare" {
+
+  org_id = var.org_id
+
+  type = "phlare"
+  name = "phlare"
+  uid  = "phlare"
+
+  url = "http://phlare:4100"
+
+  json_data_encoded = jsonencode({
+    backendType = "phlare"
   })
   http_headers = {
     X-Scope-OrgID = "1"
