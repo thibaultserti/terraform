@@ -40,24 +40,24 @@ resource "grafana_data_source" "thanos" {
 }
 
 
-resource "grafana_data_source" "mimir" {
+# resource "grafana_data_source" "mimir" {
 
-  org_id = var.org_id
+#   org_id = var.org_id
 
-  type = "prometheus"
-  name = "mimir"
-  uid  = "mimir"
+#   type = "prometheus"
+#   name = "mimir"
+#   uid  = "mimir"
 
-  url = "http://mimir-gateway:8080/prometheus"
+#   url = "http://mimir-gateway:8080/prometheus"
 
-  json_data_encoded = jsonencode({
-    prometheusType    = "Mimir"
-    prometheusVersion = "2.9.1"
-  })
-  http_headers = {
-    X-Scope-OrgID = "1"
-  }
-}
+#   json_data_encoded = jsonencode({
+#     prometheusType    = "Mimir"
+#     prometheusVersion = "2.9.1"
+#   })
+#   http_headers = {
+#     X-Scope-OrgID = "1"
+#   }
+# }
 
 
 resource "grafana_data_source" "alertmanager" {
