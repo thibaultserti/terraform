@@ -167,18 +167,18 @@ resource "grafana_data_source" "tempo" {
   }
 }
 
-resource "grafana_data_source" "phlare" {
+resource "grafana_data_source" "pyroscope" {
 
   org_id = var.org_id
 
   type = "phlare"
-  name = "phlare"
-  uid  = "phlare"
+  name = "pyroscope"
+  uid  = "pyroscope"
 
-  url = "http://phlare:4100"
+  url = "http://pyroscope:4040"
 
   json_data_encoded = jsonencode({
-    backendType = "phlare"
+    backendType = "pyroscope"
   })
   http_headers = {
     X-Scope-OrgID = "1"
