@@ -903,7 +903,7 @@
     "refresh": "5s",
     "schemaVersion": 37,
     "style": "dark",
-    "tags": ["Cilium"],
+    "tags": ["cilium"],
     "templating": {
       "list": [
         {

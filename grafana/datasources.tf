@@ -184,3 +184,23 @@ resource "grafana_data_source" "pyroscope" {
     X-Scope-OrgID = "1"
   }
 }
+
+resource "grafana_data_source" "hubble" {
+
+  org_id = var.org_id
+
+  type = "isovalent-hubble-datasource"
+  name = "hubble"
+  uid  = "hubble"
+
+  url = "http://hubble-relay.kube-system"
+
+  json_data_encoded = jsonencode({
+    prometheusDatasourceUid = "prometheus"
+    tempoDatasourceUid      = "tempo"
+
+  })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
+}
