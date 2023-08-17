@@ -6,7 +6,7 @@ buckets = [
   },
   {
     name       = "tempo"
-    quota      = 20000000000
+    quota      = 100000000000
     expiration = "90d"
   },
   {
