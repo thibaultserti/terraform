@@ -39,6 +39,7 @@ No modules.
 | <a name="input_pihole_api_token"></a> [pihole\_api\_token](#input\_pihole\_api\_token) | Pihole API token | `string` | n/a | yes |
 | <a name="input_records_external"></a> [records\_external](#input\_records\_external) | List of the publicly accessible DNS records | `list(string)` | `[]` | no |
 | <a name="input_records_internal"></a> [records\_internal](#input\_records\_internal) | List of the only internal accessible DNS records | `list(string)` | `[]` | no |
+| <a name="input_records_teleport"></a> [records\_teleport](#input\_records\_teleport) | List of CNAME to teleport | `list(string)` | `[]` | no |
 | <a name="input_tailscale_domain"></a> [tailscale\_domain](#input\_tailscale\_domain) | n/a | `string` | `"Tailscale domain for the user"` | no |
 
 ## Outputs
