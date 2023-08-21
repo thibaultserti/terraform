@@ -14,7 +14,7 @@ host_records = {
   "ceres"  = "192.168.1.43"
   "box"    = "192.168.0.1"
   "router" = "192.168.1.1"
-  "belt"   = "192.168.1.101"
+  "belt"   = "192.168.1.101" # teleport
 }
 
 records_internal = [
