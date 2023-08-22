@@ -45,4 +45,9 @@ apps = {
     secrets   = ["thanos"]
     namespace = "monitoring"
   }
+
+  falcosidekick = {
+    secrets   = ["falco"]
+    namespace = "falco"
+  }
 }
