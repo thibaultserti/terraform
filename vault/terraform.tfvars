@@ -45,9 +45,21 @@ apps = {
     secrets   = ["thanos"]
     namespace = "monitoring"
   }
-
   falcosidekick = {
     secrets   = ["falco"]
     namespace = "falco"
   }
+  ctfd = {
+    secrets   = ["ctfd/ctfd"]
+    namespace = "ctfd"
+  }
+  ctfd-mariadb = {
+    secrets   = ["ctfd/mariadb"]
+    namespace = "ctfd"
+  }
+  ctfd-redis = {
+    secrets   = ["ctfd/redis"]
+    namespace = "ctfd"
+  }
+
 }
