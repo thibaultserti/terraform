@@ -18,5 +18,10 @@ buckets = [
     name       = "thanos"
     quota      = 100000000000
     expiration = "7d"
+  },
+  {
+    name       = "ctfd"
+    quota      = 10000000000
+    expiration = "180d"
   }
 ]
