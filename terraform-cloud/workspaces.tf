@@ -10,6 +10,7 @@ resource "tfe_workspace" "workspaces" {
   trigger_patterns  = each.value.working_directory != null ? [format("%s/**/*", each.value.working_directory)] : [format("%s/**/*", each.value.name)]
   auto_apply        = each.value.auto_apply
   ssh_key_id        = var.ssh_key_id
+  terraform_version = var.terraform_version
   vcs_repo {
     identifier                 = each.value.vcs_repo
     github_app_installation_id = var.github_app_installation_id
