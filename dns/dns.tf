@@ -1,4 +1,5 @@
 
+### INTERNAL
 
 # Pihole
 
@@ -34,4 +35,28 @@ resource "cloudflare_record" "wildcard_record" {
   type    = "CNAME"
   ttl     = 3600
   proxied = false
+}
+
+### EXTERNAL
+
+resource "cloudflare_record" "cloudflare_records_home" {
+  zone_id = var.cloudflare_zone_id
+  name    = var.home_alias
+  value   = var.home_ip
+  type    = "A"
+  proxied = true
+
+  lifecycle {
+    ignore_changes = [
+      value
+    ]
+  }
+}
+resource "cloudflare_record" "cloudflare_records_external" {
+  for_each = toset(var.records_external)
+  zone_id  = var.cloudflare_zone_id
+  name     = each.value
+  value    = format("%s.%s", var.home_alias, var.domain_name)
+  type     = "CNAME"
+  proxied  = true
 }

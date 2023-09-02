@@ -22,6 +22,8 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [cloudflare_record.cloudflare_records_external](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
+| [cloudflare_record.cloudflare_records_home](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [cloudflare_record.cloudflare_records_internal](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [cloudflare_record.wildcard_record](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [pihole_cname_record.pihole_records_internal](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/cname_record) | resource |
@@ -34,6 +36,8 @@ No modules.
 | <a name="input_cloudflare_api_token"></a> [cloudflare\_api\_token](#input\_cloudflare\_api\_token) | Cloudflare API token | `string` | n/a | yes |
 | <a name="input_cloudflare_zone_id"></a> [cloudflare\_zone\_id](#input\_cloudflare\_zone\_id) | n/a | `string` | `"Zone id to where the records should be edited"` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | n/a | `string` | `"User domain name"` | no |
+| <a name="input_home_alias"></a> [home\_alias](#input\_home\_alias) | Home alias to be used in DNS | `string` | n/a | yes |
+| <a name="input_home_ip"></a> [home\_ip](#input\_home\_ip) | Home IP | `string` | n/a | yes |
 | <a name="input_host_records"></a> [host\_records](#input\_host\_records) | Map of the host records | `map(string)` | `{}` | no |
 | <a name="input_lb_host"></a> [lb\_host](#input\_lb\_host) | Hostname of the server on which there is the LB | `string` | n/a | yes |
 | <a name="input_pihole_api_token"></a> [pihole\_api\_token](#input\_pihole\_api\_token) | Pihole API token | `string` | n/a | yes |

@@ -52,3 +52,13 @@ variable "lb_host" {
   type        = string
   description = "Hostname of the server on which there is the LB"
 }
+
+variable "home_alias" {
+  type        = string
+  description = "Home alias to be used in DNS"
+}
+
+variable "home_ip" {
+  type        = string
+  description = "Home IP"
+}

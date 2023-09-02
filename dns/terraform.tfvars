@@ -21,4 +21,10 @@ records_internal = [
   "pihole",
   "semaphore"
 ]
-records_external = []
+records_external = [
+  "ctfd",
+]
+
+
+home_alias = "home"
+home_ip    = "85.169.183.42"
