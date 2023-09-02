@@ -1,8 +1,6 @@
 resource "cloudflare_zone_settings_override" "ciphers" {
   zone_id = var.cloudflare_zone_id
   settings {
-    prefetch_preload = null
-    http2            = null
     ciphers = [
       "TLS_AES_128_GCM_SHA256",
       "TLS_AES_256_GCM_SHA384",
