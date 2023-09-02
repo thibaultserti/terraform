@@ -26,6 +26,7 @@ No modules.
 | [cloudflare_record.cloudflare_records_home](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [cloudflare_record.cloudflare_records_internal](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [cloudflare_record.wildcard_record](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
+| [cloudflare_zone_settings_override.ciphers](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/zone_settings_override) | resource |
 | [pihole_cname_record.pihole_records_internal](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/cname_record) | resource |
 | [pihole_dns_record.host_records](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/dns_record) | resource |
 
