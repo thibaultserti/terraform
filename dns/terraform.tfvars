@@ -23,6 +23,7 @@ records_internal = [
 ]
 records_external = [
   "ctfd",
+  "challenges"
 ]
 
 
