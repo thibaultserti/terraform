@@ -15,6 +15,12 @@ resource "pihole_cname_record" "pihole_records_internal" {
   target   = format("%s.%s", var.lb_host, var.domain_name)
 }
 
+resource "pihole_cname_record" "pihole_records_traefik" {
+  for_each = toset(var.records_traefik)
+  domain   = format("%s.%s", each.key, var.domain_name)
+  target   = format("%s.%s", var.traefik_host, var.domain_name)
+}
+
 # Cloudflare
 
 resource "cloudflare_record" "cloudflare_records_internal" {

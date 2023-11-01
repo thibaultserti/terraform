@@ -26,8 +26,8 @@ No modules.
 | [cloudflare_record.cloudflare_records_home](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [cloudflare_record.cloudflare_records_internal](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
 | [cloudflare_record.wildcard_record](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/record) | resource |
-| [cloudflare_zone_settings_override.ciphers](https://registry.terraform.io/providers/cloudflare/cloudflare/latest/docs/resources/zone_settings_override) | resource |
 | [pihole_cname_record.pihole_records_internal](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/cname_record) | resource |
+| [pihole_cname_record.pihole_records_traefik](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/cname_record) | resource |
 | [pihole_dns_record.host_records](https://registry.terraform.io/providers/ryanwholey/pihole/0.0.12/docs/resources/dns_record) | resource |
 
 ## Inputs
@@ -45,7 +45,9 @@ No modules.
 | <a name="input_records_external"></a> [records\_external](#input\_records\_external) | List of the publicly accessible DNS records | `list(string)` | `[]` | no |
 | <a name="input_records_internal"></a> [records\_internal](#input\_records\_internal) | List of the only internal accessible DNS records | `list(string)` | `[]` | no |
 | <a name="input_records_teleport"></a> [records\_teleport](#input\_records\_teleport) | List of CNAME to teleport | `list(string)` | `[]` | no |
+| <a name="input_records_traefik"></a> [records\_traefik](#input\_records\_traefik) | List of the only internal accessible DNS records (hosted on Kubernetes) | `list(string)` | `[]` | no |
 | <a name="input_tailscale_domain"></a> [tailscale\_domain](#input\_tailscale\_domain) | n/a | `string` | `"Tailscale domain for the user"` | no |
+| <a name="input_traefik_host"></a> [traefik\_host](#input\_traefik\_host) | Hostname of traefik | `string` | n/a | yes |
 
 ## Outputs
 

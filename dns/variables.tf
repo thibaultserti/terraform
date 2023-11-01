@@ -42,6 +42,12 @@ variable "records_internal" {
   default     = []
 }
 
+variable "records_traefik" {
+  type        = list(string)
+  description = "List of the only internal accessible DNS records (hosted on Kubernetes)"
+  default     = []
+}
+
 variable "records_external" {
   type        = list(string)
   description = "List of the publicly accessible DNS records"
@@ -51,6 +57,11 @@ variable "records_external" {
 variable "lb_host" {
   type        = string
   description = "Hostname of the server on which there is the LB"
+}
+
+variable "traefik_host" {
+  type        = string
+  description = "Hostname of traefik"
 }
 
 variable "home_alias" {
