@@ -5,6 +5,11 @@ buckets = [
     expiration = "90d"
   },
   {
+    name       = "loki-ruler"
+    quota      = 20000000000
+    expiration = "90d"
+  },
+  {
     name       = "tempo"
     quota      = 10000000000
     expiration = "90d"
