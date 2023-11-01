@@ -28,6 +28,7 @@ records_traefik = [
   "ctfd",
   "challenge",
   "argocd",
+  "minio",
   "grafana",
   "prometheus",
   "thanos",
