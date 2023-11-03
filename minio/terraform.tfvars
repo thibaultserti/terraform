@@ -17,7 +17,7 @@ buckets = [
   {
     name       = "thanos"
     quota      = 100000000000
-    expiration = "7d"
+    expiration = "90d"
   },
   {
     name       = "ctfd"
