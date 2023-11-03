@@ -25,6 +25,7 @@ records_internal = [
 
 records_traefik = [
   "kubernetes",
+  "longhorn",
   "ctfd",
   "challenge",
   "argocd",
