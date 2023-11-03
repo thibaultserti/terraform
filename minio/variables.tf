@@ -22,5 +22,10 @@ variable "buckets" {
     quota      = optional(number, 1000000000)
     expiration = string
   }))
+  description = "Buckets"
+}
 
+variable "users" {
+  type        = list(string)
+  description = "Users"
 }

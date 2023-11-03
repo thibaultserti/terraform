@@ -25,3 +25,5 @@ buckets = [
     expiration = "180d"
   }
 ]
+
+users = ["loki", "tempo", "thanos", "ctfd"]
