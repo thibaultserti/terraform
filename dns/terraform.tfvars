@@ -56,7 +56,6 @@ records_traefik = [
 
 records_external = [
   "ctfd",
-  "challenges",
   "challenge"
 ]
 
