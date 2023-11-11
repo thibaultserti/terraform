@@ -52,11 +52,7 @@ records_traefik = [
   "port-6831.otel",
   "prometheus.otel",
   "opentelemetry-demo",
-  "fastapi-observability-demo-a",
-  "fastapi-observability-demo-b",
-  "fastapi-observability-demo-c",
-  "fastapi-profiling-demo"
-
+  "fastapi-manual-instrumented"
 ]
 
 records_external = [
