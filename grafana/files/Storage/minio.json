@@ -26,7 +26,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13502,
   "graphTooltip": 0,
-  "id": 152,
+  "id": 29,
   "links": [
     {
       "icon": "external link",
@@ -96,7 +96,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -174,7 +174,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -351,6 +351,7 @@
               "tooltip": false,
               "viz": false
             },
+            "insertNulls": false,
             "lineInterpolation": "linear",
             "lineWidth": 1,
             "pointSize": 5,
@@ -511,7 +512,7 @@
         "text": {},
         "valueMode": "color"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -520,7 +521,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "minio_bucket_objects_size_distribution{job=\"$scrape_jobs\"}",
+          "expr": "minio_cluster_objects_size_distribution{}",
           "format": "time_series",
           "instant": false,
           "interval": "",
@@ -593,7 +594,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -672,7 +673,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -755,7 +756,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -838,7 +839,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -921,15 +922,16 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "$datasource"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "minio_cluster_disk_online_total{job=\"$scrape_jobs\"}",
+          "expr": "minio_cluster_disk_online_total",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1007,7 +1009,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -1016,7 +1018,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "count(count by (bucket) (minio_bucket_usage_object_total\n{job=\"$scrape_jobs\"}))\n",
+          "expr": "minio_cluster_bucket_total",
           "format": "time_series",
           "instant": false,
           "interval": "1m",
@@ -1066,7 +1068,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1158,7 +1160,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1272,7 +1274,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -1355,15 +1357,16 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
             "type": "prometheus",
             "uid": "$datasource"
           },
+          "editorMode": "code",
           "exemplar": true,
-          "expr": "minio_cluster_disk_offline_total{job=\"$scrape_jobs\"}",
+          "expr": "minio_cluster_disk_offline_total",
           "format": "table",
           "hide": false,
           "instant": true,
@@ -1441,7 +1444,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -1450,7 +1453,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "sum (minio_bucket_usage_object_total{job=\"$scrape_jobs\"})",
+          "expr": "sum (minio_bucket_usage_object_total)",
           "format": "table",
           "instant": false,
           "interval": "1m",
@@ -1511,7 +1514,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -1582,7 +1585,7 @@
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "targets": [
         {
           "datasource": {
@@ -1642,7 +1645,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1734,7 +1737,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1826,7 +1829,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1928,7 +1931,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -2031,7 +2034,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.1.5",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -2851,6 +2854,6 @@
   "timezone": "",
   "title": "MinIO Cluster Dashboard",
   "uid": "TgmJnqnnk",
-  "version": 5,
+  "version": 2,
   "weekStart": ""
 }
