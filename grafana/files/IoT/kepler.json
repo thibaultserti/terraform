@@ -297,7 +297,7 @@
         {
           "datasource": "prometheus",
           "editorMode": "code",
-          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_package_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[1m]))",
+          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_package_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[2m]))",
           "hide": false,
           "interval": "",
           "legendFormat": "{{pod_name}} / {{container_namespace}} / PKG",
@@ -307,7 +307,7 @@
         {
           "datasource": "prometheus",
           "editorMode": "code",
-          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_dram_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[1m]))",
+          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_dram_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[2m]))",
           "hide": false,
           "interval": "",
           "legendFormat": "{{pod_name}} / {{container_namespace}} / DRAM",
@@ -320,7 +320,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_other_host_components_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[1m]))",
+          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_other_host_components_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[2m]))",
           "hide": false,
           "interval": "",
           "legendFormat": "{{pod_name}} / {{container_namespace}} / OTHER",
@@ -333,7 +333,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_gpu_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[1m]))",
+          "expr": "sum by (pod_name, container_namespace) (irate(kepler_container_gpu_joules_total{container_namespace=~\"$namespace\", pod_name=~\"$pod\"}[2m]))",
           "hide": false,
           "legendFormat": "{{pod_name}} / {{container_namespace}} / GPU",
           "range": true,
@@ -506,7 +506,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(irate(kepler_container_dram_joules_total{container_namespace=~\"$namespace\"}[1m]))",
+          "expr": "sum(irate(kepler_container_dram_joules_total{container_namespace=~\"$namespace\"}[2m]))",
           "hide": false,
           "interval": "",
           "legendFormat": "DRAM",
@@ -519,7 +519,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(irate(kepler_container_other_host_components_joules_total{container_namespace=~\"$namespace\"}[1m]))",
+          "expr": "sum(irate(kepler_container_other_host_components_joules_total{container_namespace=~\"$namespace\"}[2m]))",
           "hide": false,
           "legendFormat": "OTHER",
           "range": true,
@@ -531,7 +531,7 @@
             "uid": "${datasource}"
           },
           "editorMode": "code",
-          "expr": "sum(irate(kepler_container_gpu_joules_total{container_namespace=~\"$namespace\"}[1m]))",
+          "expr": "sum(irate(kepler_container_gpu_joules_total{container_namespace=~\"$namespace\"}[2m]))",
           "hide": false,
           "legendFormat": " GPU",
           "range": true,
@@ -756,8 +756,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -899,7 +898,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "2.23",
           "value": "2.23"
         },
@@ -919,7 +918,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "0.91",
           "value": "0.91"
         },
@@ -939,7 +938,7 @@
       },
       {
         "current": {
-          "selected": false,
+          "selected": true,
           "text": "2.13",
           "value": "2.13"
         },
@@ -969,13 +968,13 @@
     ]
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-3h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "browser",
   "title": "Kepler Exporter Dashboard",
   "uid": "NhnADUW4z",
-  "version": 4,
+  "version": 5,
   "weekStart": ""
 }
