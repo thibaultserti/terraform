@@ -42,6 +42,7 @@ records_traefik = [
   "pyroscope",
   "hubble",
   "polaris",
+  "goldilocks",
   "kyverno",
   "falco",
   "vault",
