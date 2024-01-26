@@ -61,5 +61,8 @@ apps = {
     secrets   = ["ctfd/redis"]
     namespace = "ctfd"
   }
-
+  ovh-certificate-api-app = {
+    secrets   = ["my-apps/ovh-certificate-api"]
+    namespace = "my-apps"
+  }
 }

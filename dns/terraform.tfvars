@@ -53,13 +53,15 @@ records_traefik = [
   "port-6831.otel",
   "prometheus.otel",
   "opentelemetry-demo",
-  "fastapi-manual-instrumented"
+  "fastapi-manual-instrumented",
+  "ovh-certificate-api"
 ]
 
 records_external = [
   "ctfd",
   "challenge",
-  "hotrod"
+  "hotrod",
+  "ovh-certificate-api"
 ]
 
 
