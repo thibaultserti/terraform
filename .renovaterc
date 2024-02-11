@@ -29,5 +29,6 @@
       ]
     }
   ],
+  "ignoreTests": true,
   "platformAutomerge": true
 }
