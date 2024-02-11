@@ -56,6 +56,7 @@ records_traefik = [
   "fastapi-manual-instrumented",
   "ovh-certificate-api",
   "yopass",
+  "stirling-pdf"
 ]
 
 records_external = [
