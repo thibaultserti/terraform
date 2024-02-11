@@ -96,16 +96,16 @@ $ vault write -f auth/approle/role/terraform/secret-id
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.5.0 |
-| <a name="requirement_google"></a> [google](#requirement\_google) | ~> 4.77.0 |
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.19.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <2.0.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | ~> 5.8.0 |
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.23.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | ~> 4.77.0 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 3.19.0 |
+| <a name="provider_google"></a> [google](#provider\_google) | ~> 5.8.0 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 3.23.0 |
 
 ## Modules
 
