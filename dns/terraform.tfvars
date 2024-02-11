@@ -54,14 +54,16 @@ records_traefik = [
   "prometheus.otel",
   "opentelemetry-demo",
   "fastapi-manual-instrumented",
-  "ovh-certificate-api"
+  "ovh-certificate-api",
+  "yopass",
 ]
 
 records_external = [
   "ctfd",
   "challenge",
   "hotrod",
-  "ovh-certificate-api"
+  "ovh-certificate-api",
+  "yopass"
 ]
 
 
