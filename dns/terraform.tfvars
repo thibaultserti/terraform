@@ -64,7 +64,8 @@ records_external = [
   "challenge",
   "hotrod",
   "ovh-certificate-api",
-  "yopass"
+  "yopass",
+  "stirling-pdf"
 ]
 
 
