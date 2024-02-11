@@ -56,7 +56,8 @@ records_traefik = [
   "fastapi-manual-instrumented",
   "ovh-certificate-api",
   "yopass",
-  "stirling-pdf"
+  "stirling-pdf",
+  "status"
 ]
 
 records_external = [
@@ -65,7 +66,8 @@ records_external = [
   "hotrod",
   "ovh-certificate-api",
   "yopass",
-  "stirling-pdf"
+  "stirling-pdf",
+  "status"
 ]
 
 
