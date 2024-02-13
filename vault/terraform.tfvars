@@ -13,7 +13,7 @@ apps = {
     secrets   = ["alertmanager"]
     namespace = "monitoring"
   }
-  victoria-metrics-alertmanager = {
+  vmalertmanager-vm-stack-victoria-metrics-k8s-stack = {
     secrets   = ["alertmanager"]
     namespace = "monitoring"
   }
