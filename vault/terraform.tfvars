@@ -13,6 +13,10 @@ apps = {
     secrets   = ["alertmanager"]
     namespace = "monitoring"
   }
+  victoria-metrics-alertmanager = {
+    secrets   = ["alertmanager"]
+    namespace = "monitoring"
+  }
   pihole-exporter = {
     secrets   = ["pihole-exporter"]
     namespace = "monitoring"
