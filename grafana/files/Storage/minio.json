@@ -1453,7 +1453,7 @@
           },
           "editorMode": "code",
           "exemplar": true,
-          "expr": "sum (minio_bucket_usage_object_total)",
+          "expr": "sum(minio_cluster_usage_object_total)",
           "format": "table",
           "instant": false,
           "interval": "1m",
