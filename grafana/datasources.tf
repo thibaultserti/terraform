@@ -1,43 +1,43 @@
 
-resource "grafana_data_source" "prometheus" {
+# resource "grafana_data_source" "prometheus" {
 
-  org_id = var.org_id
+#   org_id = var.org_id
 
-  type       = "prometheus"
-  name       = "prometheus"
-  uid        = "prometheus"
-  is_default = true
+#   type       = "prometheus"
+#   name       = "prometheus"
+#   uid        = "prometheus"
+#   is_default = true
 
-  url = "http://prometheus-stack-kube-prom-prometheus:9090"
+#   url = "http://prometheus-stack-kube-prom-prometheus:9090"
 
-  json_data_encoded = jsonencode({
-    prometheusType    = "Prometheus"
-    prometheusVersion = "2.40.1"
-  })
-  http_headers = {
-    X-Scope-OrgID = "1"
-  }
-}
+#   json_data_encoded = jsonencode({
+#     prometheusType    = "Prometheus"
+#     prometheusVersion = "2.40.1"
+#   })
+#   http_headers = {
+#     X-Scope-OrgID = "1"
+#   }
+# }
 
 
-resource "grafana_data_source" "thanos" {
+# resource "grafana_data_source" "thanos" {
 
-  org_id = var.org_id
+#   org_id = var.org_id
 
-  type = "prometheus"
-  name = "thanos"
-  uid  = "thanos"
+#   type = "prometheus"
+#   name = "thanos"
+#   uid  = "thanos"
 
-  url = "http://thanos-query-frontend:9090"
-  json_data_encoded = jsonencode({
-    prometheusType    = "Thanos"
-    prometheusVersion = "0.31.1"
-    httpMethod        = "POST"
-  })
-  http_headers = {
-    X-Scope-OrgID = "1"
-  }
-}
+#   url = "http://thanos-query-frontend:9090"
+#   json_data_encoded = jsonencode({
+#     prometheusType    = "Thanos"
+#     prometheusVersion = "0.31.1"
+#     httpMethod        = "POST"
+#   })
+#   http_headers = {
+#     X-Scope-OrgID = "1"
+#   }
+# }
 
 
 # resource "grafana_data_source" "mimir" {
@@ -60,6 +60,27 @@ resource "grafana_data_source" "thanos" {
 # }
 
 
+resource "grafana_data_source" "victoria_metrics" {
+
+  org_id = var.org_id
+
+  type       = "prometheus"
+  name       = "victoriametrics"
+  uid        = "victoriametrics"
+  is_default = true
+
+  url = "http://vmsingle-vm-stack-victoria-metrics-k8s-stack.monitoring.svc:8429"
+
+  json_data_encoded = jsonencode({
+    prometheusType    = "Prometheus"
+    prometheusVersion = "2.50.1"
+  })
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
+}
+
+
 resource "grafana_data_source" "alertmanager" {
 
   org_id = var.org_id
@@ -68,7 +89,7 @@ resource "grafana_data_source" "alertmanager" {
   name = "alertmanager"
   uid  = "alertmanager"
 
-  url = "http://alertmanager-operated:9093"
+  url = "http://vmalertmanager-vm-stack-victoria-metrics-k8s-stack.monitoring.svc:9093"
 
   json_data_encoded = jsonencode({
     implementation             = "prometheus"
@@ -135,13 +156,13 @@ resource "grafana_data_source" "tempo" {
       query              = "method=\"$${__span.tags.method}\""
     }
     tracesToMetrics = {
-      datasourceUid      = "prom"
+      datasourceUid      = "victoriametrics"
       spanStartTimeShift = "1h"
       spanEndTimeShift   = "-1h"
       tags               = [{ "key" : "service.name", "value" : "service" }, { "key" : "job" }]
     }
     serviceMap = {
-      datasourceUid = "prometheus"
+      datasourceUid = "victoriametrics"
     }
     nodeGraph = {
       enabled = true
@@ -196,7 +217,7 @@ resource "grafana_data_source" "hubble" {
   url = "http://hubble-relay.kube-system"
 
   json_data_encoded = jsonencode({
-    prometheusDatasourceUid = "prometheus"
+    prometheusDatasourceUid = "victoriametrics"
     tempoDatasourceUid      = "tempo"
 
   })
