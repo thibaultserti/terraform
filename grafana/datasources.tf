@@ -100,6 +100,21 @@ resource "grafana_data_source" "alertmanager" {
   }
 }
 
+resource "grafana_data_source" "prometheus_alertmanager" {
+
+  org_id = var.org_id
+
+  type = "camptocamp-prometheus-alertmanager-datasource"
+  name = "prometheus-alertmanager"
+  uid  = "prometheus-alertmanager"
+
+  url = "http://vmalertmanager-vm-stack-victoria-metrics-k8s-stack.monitoring.svc:9093"
+
+  http_headers = {
+    X-Scope-OrgID = "1"
+  }
+}
+
 resource "grafana_data_source" "loki" {
 
   org_id = var.org_id

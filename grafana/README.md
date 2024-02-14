@@ -29,6 +29,7 @@ No modules.
 | [grafana_data_source.alertmanager](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.hubble](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.loki](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
+| [grafana_data_source.prometheus_alertmanager](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.pyroscope](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.tempo](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
 | [grafana_data_source.victoria_metrics](https://registry.terraform.io/providers/grafana/grafana/latest/docs/resources/data_source) | resource |
