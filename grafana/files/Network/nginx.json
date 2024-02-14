@@ -20,7 +20,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 12708,
   "graphTooltip": 0,
-  "id": 234,
+  "id": 17,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -39,9 +39,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -50,7 +48,8 @@
     },
     {
       "datasource": {
-        "type": "prometheus"
+        "type": "prometheus",
+        "uid": "victoriametrics"
       },
       "description": "",
       "fieldConfig": {
@@ -75,8 +74,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "#E02F44",
-                "value": null
+                "color": "#E02F44"
               },
               {
                 "color": "#FF9830",
@@ -88,7 +86,8 @@
               }
             ]
           },
-          "unit": "none"
+          "unit": "none",
+          "unitScale": true
         },
         "overrides": []
       },
@@ -113,24 +112,25 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
       },
-      "pluginVersion": "10.0.3",
+      "pluginVersion": "10.3.1",
       "repeat": "instance",
       "repeatDirection": "h",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "nginx_up{instance=~\"$instance\"}",
+          "datasource": "$datasource",
+          "editorMode": "code",
+          "expr": "nginx_up{service=\"$service\"}",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
           "refId": "A"
         }
       ],
-      "title": "NGINX Status for $instance",
+      "title": "NGINX Status for service",
       "type": "stat"
     },
     {
@@ -148,9 +148,7 @@
       "panels": [],
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus"
-          },
+          "datasource": "$datasource",
           "refId": "A"
         }
       ],
@@ -166,6 +164,12 @@
         "type": "prometheus"
       },
       "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -196,7 +200,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.3",
+      "pluginVersion": "10.3.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -206,10 +210,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "irate(nginx_connections_accepted{instance=~\"$instance\"}[5m])",
+          "datasource": "$datasource",
+          "expr": "irate(nginx_connections_accepted{service=~\"$service\"}[5m])",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -217,10 +219,8 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "irate(nginx_connections_handled{instance=~\"$instance\"}[5m])",
+          "datasource": "$datasource",
+          "expr": "irate(nginx_connections_handled{service=~\"$service\"}[5m])",
           "format": "time_series",
           "instant": false,
           "intervalFactor": 1,
@@ -270,6 +270,12 @@
         "type": "prometheus"
       },
       "decimals": 0,
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -299,7 +305,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.3",
+      "pluginVersion": "10.3.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -309,40 +315,32 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "nginx_connections_active{instance=~\"$instance\"}",
+          "datasource": "$datasource",
+          "expr": "nginx_connections_active{service=~\"$service\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{instance}} active",
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "nginx_connections_reading{instance=~\"$instance\"}",
+          "datasource": "$datasource",
+          "expr": "nginx_connections_reading{service=~\"$service\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{instance}} reading",
           "refId": "B"
         },
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "nginx_connections_waiting{instance=~\"$instance\"}",
+          "datasource": "$datasource",
+          "expr": "nginx_connections_waiting{service=~\"$service\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{instance}} waiting",
           "refId": "C"
         },
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "nginx_connections_writing{instance=~\"$instance\"}",
+          "datasource": "$datasource",
+          "expr": "nginx_connections_writing{service=~\"$service\"}",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{instance}} writing",
@@ -389,6 +387,12 @@
       "datasource": {
         "type": "prometheus"
       },
+      "fieldConfig": {
+        "defaults": {
+          "unitScale": true
+        },
+        "overrides": []
+      },
       "fill": 1,
       "fillGradient": 0,
       "gridPos": {
@@ -416,7 +420,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.3",
+      "pluginVersion": "10.3.1",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -426,10 +430,8 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus"
-          },
-          "expr": "irate(nginx_http_requests_total{instance=~\"$instance\"}[5m])",
+          "datasource": "$datasource",
+          "expr": "irate(nginx_http_requests_total{service=~\"$service\"}[5m])",
           "format": "time_series",
           "intervalFactor": 1,
           "legendFormat": "{{instance}} total requests",
@@ -468,8 +470,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 38,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [
     "nginx"
   ],
@@ -478,14 +479,13 @@
       {
         "current": {
           "selected": false,
-          "text": "prometheus",
-          "value": "prometheus"
+          "text": "victoriametrics",
+          "value": "victoriametrics"
         },
         "hide": 0,
         "includeAll": false,
-        "label": "datasource",
         "multi": false,
-        "name": "DS_PROMETHEUS",
+        "name": "datasource",
         "options": [],
         "query": "prometheus",
         "queryValue": "",
@@ -496,26 +496,26 @@
       },
       {
         "current": {
-          "selected": true,
+          "selected": false,
           "text": [
-            "All"
+            "nginx-exporter"
           ],
           "value": [
-            "$__all"
+            "nginx-exporter"
           ]
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "prometheus"
+          "uid": "$datasource"
         },
-        "definition": "label_values(nginx_up, instance)",
+        "definition": "label_values(nginx_up, service)",
         "hide": 0,
         "includeAll": true,
         "label": "",
         "multi": true,
-        "name": "instance",
+        "name": "service",
         "options": [],
-        "query": "label_values(nginx_up, instance)",
+        "query": "label_values(nginx_up, service)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -559,6 +559,6 @@
   "timezone": "",
   "title": "NGINX exporter",
   "uid": "MsjffzSZz",
-  "version": 4,
+  "version": 13,
   "weekStart": ""
 }
