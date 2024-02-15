@@ -97,15 +97,15 @@ $ vault write -f auth/approle/role/terraform/secret-id
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <2.0.0 |
-| <a name="requirement_google"></a> [google](#requirement\_google) | ~> 5.8.0 |
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.23.0 |
+| <a name="requirement_google"></a> [google](#requirement\_google) | ~> 5.16.0 |
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | ~> 3.25.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_google"></a> [google](#provider\_google) | ~> 5.8.0 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 3.23.0 |
+| <a name="provider_google"></a> [google](#provider\_google) | ~> 5.16.0 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | ~> 3.25.0 |
 
 ## Modules
 
@@ -115,9 +115,13 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [google_kms_crypto_key.crypto_key](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_crypto_key) | resource |
+| [google_kms_key_ring.key_ring](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_key_ring) | resource |
+| [google_kms_key_ring_iam_binding.vault_iam_kms_binding](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/kms_key_ring_iam_binding) | resource |
 | [google_project_service.serviceusage_crm](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
 | [google_project_service.serviceusage_iam](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/project_service) | resource |
 | [google_service_account.service_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
+| [google_service_account.vault_kms_service_account](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/service_account) | resource |
 | [google_storage_bucket.vault_infra_snapshot](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket) | resource |
 | [google_storage_bucket_iam_binding.vault_infra_snapshot_binding](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/storage_bucket_iam_binding) | resource |
 | [vault_auth_backend.kubernetes](https://registry.terraform.io/providers/hashicorp/vault/latest/docs/resources/auth_backend) | resource |
