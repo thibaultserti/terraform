@@ -69,4 +69,8 @@ apps = {
     secrets   = ["my-apps/ovh-certificate-api"]
     namespace = "my-apps"
   }
+  kured = {
+    secrets   = ["kured"]
+    namespace = "kube-system"
+  }
 }
