@@ -60,7 +60,8 @@ records_traefik = [
   "ovh-certificate-api",
   "yopass",
   "stirling-pdf",
-  "status"
+  "status",
+  "homepage"
 ]
 
 records_external = [
@@ -70,7 +71,8 @@ records_external = [
   "ovh-certificate-api",
   "yopass",
   "stirling-pdf",
-  "status"
+  "status",
+  "homepage"
 ]
 
 
