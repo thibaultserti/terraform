@@ -11,6 +11,7 @@ resource "minio_iam_policy" "policies" {
   policy = file("policies/${each.value}.json")
 }
 
+
 resource "minio_iam_user_policy_attachment" "developer" {
   for_each    = toset(var.users)
   user_name   = minio_iam_user.users[each.key].id
