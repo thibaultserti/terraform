@@ -24,44 +24,6 @@ records_internal = [
 ]
 
 records_traefik = [
-  "kubernetes",
-  "longhorn",
-  "ctfd",
-  "challenge",
-  "argocd",
-  "minio",
-  "grafana",
-  "prometheus",
-  "thanos",
-  "thanos-bucketweb",
-  "thanos-compactor",
-  "thanos-storegateway",
-  "alertmanager",
-  "vmagent",
-  "vmalert",
-  "victoriametrics",
-  "tempo",
-  "loki",
-  "pyroscope",
-  "hubble",
-  "polaris",
-  "goldilocks",
-  "kyverno",
-  "falco",
-  "vault",
-  "otel",
-  "loki.otel",
-  "otlp-http.otel",
-  "otlp-grpc.otel",
-  "port-6831.otel",
-  "prometheus.otel",
-  "opentelemetry-demo",
-  "fastapi-manual-instrumented",
-  "ovh-certificate-api",
-  "yopass",
-  "stirling-pdf",
-  "status",
-  "homepage"
 ]
 
 records_external = [
@@ -72,9 +34,9 @@ records_external = [
   "yopass",
   "stirling-pdf",
   "status",
-  "homepage"
+  "home"
 ]
 
 
-home_alias = "home"
+home_alias = "root"
 home_ip    = "82.67.32.216"
