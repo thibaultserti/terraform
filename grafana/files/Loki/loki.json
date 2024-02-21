@@ -232,7 +232,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "cortex_prometheus_notifications_alertmanagers_discovered",
+          "expr": "loki_prometheus_notifications_alertmanagers_discovered",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -296,7 +296,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "cortex_prometheus_notifications_sent_total",
+          "expr": "loki_prometheus_notifications_sent_total",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -478,7 +478,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "sum(cortex_prometheus_rule_group_rules)",
+          "expr": "sum(loki_prometheus_rule_group_rules)",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -692,7 +692,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "histogram_quantile(0.95, sum(rate(cortex_s3_request_duration_seconds_bucket[5m])) by (le,operation))",
+          "expr": "histogram_quantile(0.95, sum(rate(loki_s3_request_duration_seconds_bucket[5m])) by (le,operation))",
           "interval": "",
           "legendFormat": "{{operation}}",
           "refId": "A"
@@ -1061,7 +1061,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "cortex_prometheus_rule_evaluations_total",
+          "expr": "loki_prometheus_rule_evaluations_total",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -1071,7 +1071,7 @@
         },
         {
           "datasource": "$datasource",
-          "expr": "cortex_prometheus_notifications_sent_total",
+          "expr": "loki_prometheus_notifications_sent_total",
           "instant": true,
           "interval": "1m",
           "legendFormat": "Notifications",
@@ -1137,7 +1137,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "sum(rate(cortex_prometheus_notifications_latency_seconds[5m]))  by (quantile)",
+          "expr": "sum(rate(loki_prometheus_notifications_latency_seconds[5m]))  by (quantile)",
           "interval": "",
           "legendFormat": "TP {{quantile}}",
           "refId": "A"
@@ -1230,7 +1230,7 @@
       "targets": [
         {
           "datasource": "$datasource",
-          "expr": "sum(rate(cortex_prometheus_rule_evaluation_duration_seconds[5m]))  by (quantile)",
+          "expr": "sum(rate(loki_prometheus_rule_evaluation_duration_seconds[5m]))  by (quantile)",
           "interval": "",
           "legendFormat": "TP {{quantile}}",
           "refId": "A"
@@ -1336,7 +1336,7 @@
                 "type": "prometheus",
                 "uid": "c71359ed-e22c-41a2-a158-a653e3521787"
               },
-              "expr": "histogram_quantile(0.95, sum(rate(cortex_cache_request_duration_seconds_bucket[5m])) by (le,name,method))",
+              "expr": "histogram_quantile(0.95, sum(rate(loki_cache_request_duration_seconds_bucket[5m])) by (le,name,method))",
               "interval": "",
               "legendFormat": "{{method}}",
               "refId": "A"
@@ -1431,7 +1431,7 @@
                 "type": "prometheus",
                 "uid": "c71359ed-e22c-41a2-a158-a653e3521787"
               },
-              "expr": "histogram_quantile(0.95, sum(rate(cortex_cache_value_size_bytes_bucket[5m])) by (le,name,method))",
+              "expr": "histogram_quantile(0.95, sum(rate(loki_cache_value_size_bytes_bucket[5m])) by (le,name,method))",
               "interval": "",
               "legendFormat": "{{name}} / {{method}}",
               "refId": "A"
@@ -1515,7 +1515,7 @@
                 "type": "prometheus",
                 "uid": "c71359ed-e22c-41a2-a158-a653e3521787"
               },
-              "expr": "rate(cortex_cache_hits[5m])",
+              "expr": "rate(loki_cache_hits[5m])",
               "interval": "",
               "legendFormat": "{{name}}",
               "refId": "A"
@@ -1599,7 +1599,7 @@
                 "type": "prometheus",
                 "uid": "c71359ed-e22c-41a2-a158-a653e3521787"
               },
-              "expr": "cortex_cache_background_queue_length",
+              "expr": "loki_cache_background_queue_length",
               "interval": "",
               "legendFormat": "{{name}}",
               "refId": "A"
@@ -1684,7 +1684,7 @@
                 "type": "prometheus",
                 "uid": "c71359ed-e22c-41a2-a158-a653e3521787"
               },
-              "expr": "cortex_cache_fetched_keys",
+              "expr": "loki_cache_fetched_keys",
               "interval": "",
               "legendFormat": "{{name}}",
               "refId": "A"
