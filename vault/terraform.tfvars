@@ -73,4 +73,8 @@ apps = {
     secrets   = ["kured"]
     namespace = "kube-system"
   }
+  external-dns = {
+    secrets   = ["pihole"]
+    namespace = "external-dns"
+  }
 }
