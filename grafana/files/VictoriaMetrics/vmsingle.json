@@ -5440,8 +5440,7 @@
     "schemaVersion": 37,
     "style": "dark",
     "tags": [
-      "victoriametrics",
-      "vmsingle"
+      "victoriametrics"
     ],
     "templating": {
       "list": [

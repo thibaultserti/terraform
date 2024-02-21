@@ -3008,8 +3008,7 @@
     "schemaVersion": 38,
     "style": "dark",
     "tags": [
-      "Kubernetes",
-      "Prometheus"
+      "percent"
     ],
     "templating": {
       "list": [

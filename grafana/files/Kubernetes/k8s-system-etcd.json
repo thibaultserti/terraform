@@ -3224,9 +3224,8 @@
   "schemaVersion": 32,
   "style": "dark",
   "tags": [
-    "etcd",
-    "prometheus"
-  ],
+    "kubernetes"
+    ],
   "templating": {
     "list": [
       {

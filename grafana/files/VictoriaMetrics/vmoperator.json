@@ -1258,8 +1258,7 @@
     "schemaVersion": 37,
     "style": "dark",
     "tags": [
-      "operator",
-      "VictoriaMetrics"
+      "victoriametrics"
     ],
     "templating": {
       "list": [

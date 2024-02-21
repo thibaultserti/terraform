@@ -779,7 +779,7 @@
   "refresh": "5m",
   "schemaVersion": 38,
   "style": "dark",
-  "tags": [],
+  "tags": ["speedtest"],
   "templating": {
     "list": [
       {

@@ -2920,7 +2920,7 @@
     "schemaVersion": 14,
     "style": "dark",
     "tags": [
-       "thanos-mixin"
+       "thanos"
     ],
     "templating": {
        "list": [

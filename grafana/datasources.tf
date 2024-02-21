@@ -123,7 +123,7 @@ resource "grafana_data_source" "loki" {
   name = "loki"
   uid  = "loki"
 
-  url = "http://loki:3100"
+  url = "http://loki-read.monitoring.svc:3100"
 
   json_data_encoded = jsonencode({
     maxLines = 1000
@@ -155,7 +155,7 @@ resource "grafana_data_source" "tempo" {
   name = "tempo"
   uid  = "tempo"
 
-  url = "http://tempo:3100"
+  url = "http://tempo.monitoring.svc:3100"
 
   json_data_encoded = jsonencode({
     maxLines = 1000
@@ -211,7 +211,7 @@ resource "grafana_data_source" "pyroscope" {
   name = "pyroscope"
   uid  = "pyroscope"
 
-  url = "http://pyroscope:4040"
+  url = "http://pyroscope.monitoring.svc:4040"
 
   json_data_encoded = jsonencode({
     backendType = "pyroscope"
@@ -229,7 +229,7 @@ resource "grafana_data_source" "hubble" {
   name = "hubble"
   uid  = "hubble"
 
-  url = "http://hubble-relay.kube-system"
+  url = "http://hubble-relay.kube-system.svc:80"
 
   json_data_encoded = jsonencode({
     prometheusDatasourceUid = "victoriametrics"

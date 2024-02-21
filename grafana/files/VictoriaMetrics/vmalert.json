@@ -3096,8 +3096,7 @@
     "schemaVersion": 37,
     "style": "dark",
     "tags": [
-      "victoriametrics",
-      "vmalert"
+      "victoriametrics"
     ],
     "templating": {
       "list": [
