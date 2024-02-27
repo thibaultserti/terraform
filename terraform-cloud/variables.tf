@@ -51,6 +51,5 @@ variable "workspaces" {
 variable "terraform_version" {
   type        = string
   description = "Terraform version"
-  default     = "1.5.6"
-
+  default     = "~> 1.7.0"
 }
