@@ -4,13 +4,13 @@
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.5.0, <2.0.0 |
-| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | ~> 0.50.0 |
+| <a name="requirement_tfe"></a> [tfe](#requirement\_tfe) | ~> 0.52.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | ~> 0.50.0 |
+| <a name="provider_tfe"></a> [tfe](#provider\_tfe) | ~> 0.52.0 |
 
 ## Modules
 
@@ -23,6 +23,7 @@ No modules.
 | [tfe_agent_pool.agent_pool](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/agent_pool) | resource |
 | [tfe_notification_configuration.notifications](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/notification_configuration) | resource |
 | [tfe_workspace.workspaces](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace) | resource |
+| [tfe_workspace_settings.settings](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/resources/workspace_settings) | resource |
 | [tfe_organization.org](https://registry.terraform.io/providers/hashicorp/tfe/latest/docs/data-sources/organization) | data source |
 
 ## Inputs

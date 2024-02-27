@@ -4,8 +4,6 @@ resource "tfe_workspace" "workspaces" {
   name              = each.value.name
   description       = each.value.description
   organization      = data.tfe_organization.org.name
-  agent_pool_id     = each.value.execution_mode == "agent" ? tfe_agent_pool.agent_pool.id : null
-  execution_mode    = each.value.execution_mode
   working_directory = each.value.working_directory != null ? each.value.working_directory : each.value.name
   trigger_patterns  = each.value.working_directory != null ? [format("%s/**/*", each.value.working_directory)] : [format("%s/**/*", each.value.name)]
   auto_apply        = each.value.auto_apply
@@ -26,4 +24,12 @@ resource "tfe_notification_configuration" "notifications" {
   triggers         = ["run:needs_attention", "run:completed", "run:errored"]
   url              = each.value.webhhok != null ? each.value.webhook : var.webhook
   workspace_id     = tfe_workspace.workspaces[each.value.name].id
+}
+
+resource "tfe_workspace_settings" "settings" {
+  for_each = { for obj in var.workspaces : obj.name => obj }
+
+  workspace_id   = tfe_workspace.workspaces[each.value.name].id
+  agent_pool_id  = each.value.execution_mode == "agent" ? tfe_agent_pool.agent_pool.id : null
+  execution_mode = each.value.execution_mode
 }
