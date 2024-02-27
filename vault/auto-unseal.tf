@@ -11,7 +11,7 @@ resource "google_kms_key_ring" "key_ring" {
 resource "google_kms_crypto_key" "crypto_key" {
   name            = "auto-unseal-key"
   key_ring        = google_kms_key_ring.key_ring.id
-  rotation_period = "100000s"
+  rotation_period = "7776000s" # 90 days
 }
 
 # Add the service account to the Keyring
