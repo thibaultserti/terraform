@@ -9,19 +9,19 @@ variable "pihole_api_token" {
 }
 
 variable "cloudflare_zone_id" {
-  type    = string
-  default = "Zone id to where the records should be edited"
+  type        = string
+  description = "Zone id to where the records should be edited"
 
 }
 
 variable "domain_name" {
-  type    = string
-  default = "User domain name"
+  type        = string
+  description = "User domain name"
 }
 
 variable "tailscale_domain" {
-  type    = string
-  default = "Tailscale domain for the user"
+  type        = string
+  description = "Tailscale domain for the user"
 }
 
 variable "host_records" {
