@@ -20,7 +20,7 @@
   "fiscalYearStartMonth": 0,
   "gnetId": 13659,
   "graphTooltip": 0,
-  "id": 93,
+  "id": 20,
   "links": [],
   "liveNow": false,
   "panels": [
@@ -431,7 +431,7 @@
           }
         ]
       },
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.4.0",
       "repeatDirection": "h",
       "targets": [
         {
@@ -547,6 +547,13 @@
               "__name__ 5": true,
               "__name__ 6": true,
               "__name__ 7": true,
+              "cluster 1": true,
+              "cluster 2": true,
+              "cluster 3": true,
+              "cluster 4": true,
+              "cluster 5": true,
+              "cluster 6": true,
+              "cluster 7": true,
               "container 1": true,
               "container 2": true,
               "container 3": true,
@@ -585,6 +592,13 @@
               "pod 5": true,
               "pod 6": true,
               "pod 7": true,
+              "prometheus 1": true,
+              "prometheus 2": true,
+              "prometheus 3": true,
+              "prometheus 4": true,
+              "prometheus 5": true,
+              "prometheus 6": true,
+              "prometheus 7": true,
               "service 1": true,
               "service 2": true,
               "service 3": true,
@@ -610,6 +624,7 @@
               "type 8": true,
               "version": false
             },
+            "includeByName": {},
             "indexByName": {
               "Value #A": 1,
               "Value #B": 3,
@@ -678,7 +693,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "10.0.1",
+      "pluginVersion": "10.4.0",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -852,8 +867,7 @@
     }
   ],
   "refresh": "1m",
-  "schemaVersion": 38,
-  "style": "dark",
+  "schemaVersion": 39,
   "tags": [
     "blackbox"
   ],
@@ -862,8 +876,8 @@
       {
         "current": {
           "selected": false,
-          "text": "prometheus",
-          "value": "prometheus"
+          "text": "victoriametrics",
+          "value": "victoriametrics"
         },
         "hide": 0,
         "includeAll": false,
