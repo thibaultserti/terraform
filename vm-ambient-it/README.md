@@ -24,8 +24,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_ambient_it_project"></a> [ambient\_it\_project](#input\_ambient\_it\_project) | Ambient.it project | `string` | `"formation-ambient-it"` | no |
-| <a name="input_efficom_project"></a> [efficom\_project](#input\_efficom\_project) | Efficom project | `string` | `"formation-efficom"` | no |
+| <a name="input_project"></a> [project](#input\_project) | Ambient.it project | `string` | `"formation-ambient-it"` | no |
 
 ## Outputs
 

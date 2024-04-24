@@ -4,7 +4,7 @@ terraform {
     organization = "thibaultserti"
 
     workspaces {
-      name = "vm"
+      name = "vm-efficom"
     }
   }
 }

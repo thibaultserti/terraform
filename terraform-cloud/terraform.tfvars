@@ -19,10 +19,13 @@ workspaces = [
     name        = "minio"
     description = "Minio management"
   },
-
   {
-    name        = "vm"
-    description = "VM management"
+    name        = "vm-ambient-it"
+    description = "VM Ambient.it management"
+  },
+  {
+    name        = "vm-efficom"
+    description = "VM Efficom management"
   }
 ]
 
