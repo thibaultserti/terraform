@@ -18,6 +18,11 @@ workspaces = [
   {
     name        = "minio"
     description = "Minio management"
+  },
+
+  {
+    name        = "vm"
+    description = "VM management"
   }
 ]
 
