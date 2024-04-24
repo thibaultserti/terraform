@@ -14,9 +14,10 @@ variable "vms" {
   type = list(object({
     name    = string
     suffix  = optional(string, "")
+    region  = optional(string, "europe-west1")
     ssh_key = string
-    image   = optional(string, "ubuntu")
-    type    = optional(string, "e2-standard8")
-    tags    = optional(list(string), [])
+    image   = optional(string, "ubuntu-2204-lts")
+    type    = optional(string, "e2-medium")
+    tags    = optional(list(string), []) # tags to allow connection to with firewall
   }))
 }
