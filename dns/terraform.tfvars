@@ -35,7 +35,8 @@ records_external = [
   "yopass",
   "stirling-pdf",
   "status",
-  "home"
+  "home",
+  "buzzer"
 ]
 
 
