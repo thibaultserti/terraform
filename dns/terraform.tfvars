@@ -9,6 +9,7 @@ lb_host      = "eros"
 traefik_host = "traefik"
 
 host_records = {
+  "belt"     = "192.168.1.10"
   "themis"   = "192.168.1.30"
   "eros"     = "192.168.1.40"
   "tycho"    = "192.168.1.41"
