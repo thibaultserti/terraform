@@ -9,15 +9,11 @@ lb_host      = "eros"
 traefik_host = "traefik"
 
 host_records = {
-  "belt"     = "192.168.1.10"
-  "themis"   = "192.168.1.30"
-  "eros"     = "192.168.1.40"
-  "tycho"    = "192.168.1.41"
-  "pallas"   = "192.168.1.42"
-  "ceres"    = "192.168.1.43"
-  "box"      = "192.168.1.254"
-  "traefik"  = "192.168.1.100"
-  "teleport" = "192.168.1.101" # teleport
+  "themis" = "192.168.1.30"
+  "eros"   = "192.168.1.40"
+  "tycho"  = "192.168.1.41"
+  "pallas" = "192.168.1.42"
+  "ceres"  = "192.168.1.43"
 }
 
 records_internal = [
@@ -29,15 +25,8 @@ records_traefik = [
 ]
 
 records_external = [
-  "ctfd",
-  "challenge",
-  "hotrod",
-  "ovh-certificate-api",
   "yopass",
   "stirling-pdf",
-  "status",
-  "home",
-  "buzzer"
 ]
 
 
