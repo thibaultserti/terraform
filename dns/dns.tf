@@ -54,7 +54,7 @@ resource "cloudflare_record" "cloudflare_records_home" {
 
   lifecycle {
     ignore_changes = [
-      value
+      content
     ]
   }
 }
