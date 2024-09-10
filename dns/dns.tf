@@ -27,7 +27,7 @@ resource "cloudflare_record" "cloudflare_records_internal" {
   for_each = toset(var.records_internal)
   zone_id  = var.cloudflare_zone_id
   name     = each.value
-  value    = format("%s.%s", var.lb_host, var.tailscale_domain)
+  content  = format("%s.%s", var.lb_host, var.tailscale_domain)
   type     = "CNAME"
   ttl      = 3600
   proxied  = false
@@ -37,7 +37,7 @@ resource "cloudflare_record" "cloudflare_records_internal" {
 resource "cloudflare_record" "wildcard_record" {
   zone_id = var.cloudflare_zone_id
   name    = "*"
-  value   = format("%s.%s", var.lb_host, var.tailscale_domain)
+  content = format("%s.%s", var.lb_host, var.tailscale_domain)
   type    = "CNAME"
   ttl     = 3600
   proxied = false
@@ -48,7 +48,7 @@ resource "cloudflare_record" "wildcard_record" {
 resource "cloudflare_record" "cloudflare_records_home" {
   zone_id = var.cloudflare_zone_id
   name    = var.home_alias
-  value   = var.home_ip
+  content = var.home_ip
   type    = "A"
   proxied = true
 
@@ -62,7 +62,7 @@ resource "cloudflare_record" "cloudflare_records_external" {
   for_each = toset(var.records_external)
   zone_id  = var.cloudflare_zone_id
   name     = each.value
-  value    = format("%s.%s", var.home_alias, var.domain_name)
+  content  = format("%s.%s", var.home_alias, var.domain_name)
   type     = "CNAME"
   proxied  = true
 }

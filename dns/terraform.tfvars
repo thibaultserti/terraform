@@ -18,7 +18,9 @@ host_records = {
 
 records_internal = [
   "pihole",
-  "semaphore"
+  "semaphore",
+  "yopass",
+  "pdf",
 ]
 
 records_traefik = [
@@ -26,7 +28,7 @@ records_traefik = [
 
 records_external = [
   "yopass",
-  "stirling-pdf",
+  "pdf",
 ]
 
 
