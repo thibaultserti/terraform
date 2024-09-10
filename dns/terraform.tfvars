@@ -18,9 +18,6 @@ host_records = {
 
 records_internal = [
   "pihole",
-  "semaphore",
-  "yopass",
-  "pdf",
 
 ]
 
