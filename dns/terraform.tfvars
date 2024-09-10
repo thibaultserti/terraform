@@ -21,6 +21,7 @@ records_internal = [
   "semaphore",
   "yopass",
   "pdf",
+
 ]
 
 records_traefik = [
@@ -29,6 +30,7 @@ records_traefik = [
 records_external = [
   "yopass",
   "pdf",
+  "semaphore"
 ]
 
 
