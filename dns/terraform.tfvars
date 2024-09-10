@@ -27,7 +27,8 @@ records_traefik = [
 records_external = [
   "yopass",
   "pdf",
-  "semaphore"
+  "semaphore",
+  "mealie"
 ]
 
 
