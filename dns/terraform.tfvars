@@ -28,7 +28,8 @@ records_external = [
   "yopass",
   "pdf",
   "semaphore",
-  "mealie"
+  "mealie",
+  "baskets"
 ]
 
 
